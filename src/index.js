@@ -7,6 +7,7 @@ import Login from "./components/Login";
 import Details from "./components/Details";
 import Rasel from "./components/Rasel";
 import Habib from "./components/Habib";
+import Shahariar from "./components/Shahariar";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -17,6 +18,7 @@ root.render(
       <Route path="details" element={<Details />}></Route>
       <Route path="rasel" element={<Rasel />}></Route>
       <Route path="habib" element={<Habib />}></Route>
+      <Route path="shahariar" element={<Shahariar />}></Route>
     </Routes>
   </BrowserRouter>
 );

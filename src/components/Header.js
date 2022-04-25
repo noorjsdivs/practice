@@ -18,7 +18,7 @@ function Header() {
     { name: "Habib", href: "/habib", current: false },
     { name: "Fahim", href: "#", current: false },
     { name: "Nahid", href: "#", current: false },
-    { name: "Members", href: "#", current: false },
+    { name: "Shahariar", href: "/shahariar", current: false },
   ];
   function classNames(...classes) {
     return classes.filter(Boolean).join(" ");
