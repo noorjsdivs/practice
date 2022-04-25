@@ -18,6 +18,7 @@ function Header() {
     { name: "Habib", Link: "/habib", current: false },
     { name: "Ratul", Link: "/ratul", current: false },
     { name: "Shahariar", Link: "/shahariar", current: false },
+    { name: "Nahid", Link: "/nahid", current: false },
   ];
   function classNames(...classes) {
     return classes.filter(Boolean).join(" ");
