@@ -13,8 +13,11 @@ import LogoImg from "../assets/images/profile_Picture.png";
 function Header() {
   const navigation = [
     { name: "Master", href: "/", current: true },
-    { name: "Members", href: "#", current: false },
-    { name: "Members", href: "/details", current: false },
+    { name: "Details", href: "/details", current: false },
+    { name: "Rasel", href: "/Rasel", current: false },
+    { name: "Habib", href: "/habib", current: false },
+    { name: "Fahim", href: "#", current: false },
+    { name: "Nahid", href: "#", current: false },
     { name: "Members", href: "#", current: false },
   ];
   function classNames(...classes) {
