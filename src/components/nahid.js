@@ -1,6 +1,7 @@
+
 import React from "react";
 
-function nahid() {
+function Nahid() {
   return (
     <div>
       <h1>Hello everyone.</h1>
@@ -8,4 +9,5 @@ function nahid() {
   );
 }
 
-export default nahid;
+export default Nahid;
+
