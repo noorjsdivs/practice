@@ -17,7 +17,7 @@ function Header() {
     { name: "Rasel", href: "/Rasel", current: false },
     { name: "Habib", href: "/habib", current: false },
     { name: "Fahim", href: "#", current: false },
-    { name: "Nahid", href: "#", current: false },
+    { name: "Ratul", href: "/ratul", current: false },
     { name: "Shahariar", href: "/shahariar", current: false },
   ];
   function classNames(...classes) {
