@@ -9,6 +9,7 @@ import Rasel from "./components/Rasel";
 import Habib from "./components/Habib";
 import Shahariar from "./components/Shahariar";
 import Ratul from "./components/Ratul";
+import Nahid from "./components/Nahid";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -21,6 +22,7 @@ root.render(
       <Route path="habib" element={<Habib />}></Route>
       <Route path="shahariar" element={<Shahariar />}></Route>
       <Route path="ratul" element={<Ratul />}></Route>
+      <Route path="nahid" element={<Nahid />}></Route>
     </Routes>
   </BrowserRouter>
 );

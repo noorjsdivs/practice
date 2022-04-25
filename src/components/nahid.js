@@ -1,9 +1,13 @@
-import React from 'react'
 
-const nahid = () => {
+import React from "react";
+
+function Nahid() {
   return (
-    <div>nahid</div>
-  )
+    <div>
+      <h1>Hello everyone.</h1>
+    </div>
+  );
 }
 
-export default nahid
+export default Nahid;
+
