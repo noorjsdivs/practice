@@ -12,15 +12,15 @@ import Ratul from "./components/Ratul";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-	<BrowserRouter>
-		<Routes>
-			<Route path="/" element={<App />}></Route>
-			<Route path="login" element={<Login />}></Route>
-			<Route path="details" element={<Details />}></Route>
-			<Route path="rasel" element={<Rasel />}></Route>
-			<Route path="habib" element={<Habib />}></Route>
-			<Route path="shahariar" element={<Shahariar />}></Route>
-			<Route path="ratul" element={<Ratul />}></Route>
-		</Routes>
-	</BrowserRouter>
+  <BrowserRouter>
+    <Routes>
+      <Route path="/" element={<App />}></Route>
+      <Route path="login" element={<Login />}></Route>
+      <Route path="details" element={<Details />}></Route>
+      <Route path="rasel" element={<Rasel />}></Route>
+      <Route path="habib" element={<Habib />}></Route>
+      <Route path="shahariar" element={<Shahariar />}></Route>
+      <Route path="ratul" element={<Ratul />}></Route>
+    </Routes>
+  </BrowserRouter>
 );
