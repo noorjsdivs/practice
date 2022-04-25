@@ -12,12 +12,12 @@ import LogoImg from "../assets/images/profile_Picture.png";
 
 function Header() {
   const navigation = [
-    { name: "Master", href: "/", current: true },
-    { name: "Details", href: "/details", current: false },
-    { name: "Rasel", href: "/Rasel", current: false },
-    { name: "Habib", href: "/habib", current: false },
-    { name: "Ratul", href: "/ratul", current: false },
-    { name: "Shahariar", href: "/shahariar", current: false },
+    { name: "Master", Link: "/", current: true },
+    { name: "Details", Link: "/details", current: false },
+    { name: "Rasel", Link: "/Rasel", current: false },
+    { name: "Habib", Link: "/habib", current: false },
+    { name: "Ratul", Link: "/ratul", current: false },
+    { name: "Shahariar", Link: "/shahariar", current: false },
   ];
   function classNames(...classes) {
     return classes.filter(Boolean).join(" ");
@@ -58,7 +58,7 @@ function Header() {
                     {navigation.map((item) => (
                       <Link
                         key={item.name}
-                        to={item.href}
+                        to={item.Link}
                         className={classNames(
                           item.current
                             ? "bg-gray-900 text-white"
