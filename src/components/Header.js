@@ -14,11 +14,11 @@ function Header() {
 	const navigation = [
 		{ name: "Master", href: "/", current: true },
 		{ name: "Details", href: "/details", current: false },
-		{ name: "Rasel", href: "/rasel", current: false },
-		{ name: "Sarjana", href: "#", current: false },
+		{ name: "Rasel", href: "/Rasel", current: false },
+		{ name: "Habib", href: "/habib", current: false },
 		{ name: "Fahim", href: "#", current: false },
-		{ name: "Nahid", href: "#", current: false },
-		{ name: "Members", href: "#", current: false },
+		{ name: "Ratul", href: "/ratul", current: false },
+		{ name: "Shahariar", href: "/shahariar", current: false },
 	];
 	function classNames(...classes) {
 		return classes.filter(Boolean).join(" ");
