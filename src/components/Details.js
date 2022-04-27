@@ -8,10 +8,10 @@ function Details() {
     categories: [
       {
         id: "done",
-        name: "Alreay Got",
+        name: "Noor",
         featured: [
           {
-            name: "New Arrivals",
+            name: "Amazon Clone",
             href: "#",
             imageSrc:
               "https://tailwindui.com/img/ecommerce-images/mega-menu-category-01.jpg",
@@ -19,7 +19,7 @@ function Details() {
               "Models sitting back to back, wearing Basic Tee in black and bone.",
           },
           {
-            name: "Basic Tees",
+            name: "Sahara Demo",
             href: "#",
             imageSrc:
               "https://tailwindui.com/img/ecommerce-images/mega-menu-category-02.jpg",
@@ -299,7 +299,7 @@ function Details() {
 
         <header className="relative bg-white">
           <p className="bg-indigo-600 h-10 flex items-center justify-center text-sm font-medium text-white px-4 sm:px-6 lg:px-8">
-            Drow No - 2 is running for the Current Month
+            This page will contain the Projects done by the Members
           </p>
 
           <nav
@@ -456,32 +456,20 @@ function Details() {
                 <div className="ml-auto flex items-center">
                   <Link to="/">
                     <div className="hidden lg:flex lg:flex-1 lg:items-center lg:justify-end lg:space-x-6 ">
-                      <a
-                        href="#"
-                        className="text-sm font-medium text-gray-700 hover:text-gray-800"
-                      >
-                        Home
-                      </a>
-                      <span
-                        className="h-6 w-px bg-gray-200"
-                        aria-hidden="true"
-                      />
+                      <Link to="/">
+                        <div className="text-sm font-medium text-gray-700 hover:text-gray-900">
+                          Home
+                        </div>
+                      </Link>
                     </div>
                   </Link>
-                  <Link to="/login">
-                    <div className="hidden lg:flex lg:flex-1 lg:items-center lg:justify-end lg:space-x-6 ">
-                      <a
-                        href="#"
-                        className="text-sm font-medium text-gray-700 hover:text-gray-800"
-                      >
+                  <div className="hidden lg:flex ml-4 lg:flex-1 lg:items-center lg:justify-end lg:space-x-6 ">
+                    <Link to="/login">
+                      <div className="text-sm font-medium text-gray-600 hover:text-gray-900">
                         Sign in
-                      </a>
-                      <span
-                        className="h-6 w-px bg-gray-200"
-                        aria-hidden="true"
-                      />
-                    </div>
-                  </Link>
+                      </div>
+                    </Link>
+                  </div>
 
                   {/* Search */}
                   <div className="flex lg:ml-6">
