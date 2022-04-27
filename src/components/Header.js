@@ -12,7 +12,7 @@ import LogoImg from "../assets/images/profile_Picture.png";
 
 function Header() {
   const navigation = [
-    { name: "Master", Link: "/", current: true },
+    { name: "Master", Link: "/popover", current: true },
     { name: "Details", Link: "/details", current: false },
     { name: "Rasel", Link: "/Rasel", current: false },
     { name: "Habib", Link: "/habib", current: false },

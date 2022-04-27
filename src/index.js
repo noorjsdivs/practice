@@ -10,6 +10,8 @@ import Habib from "./components/Habib";
 import Shahariar from "./components/Shahariar";
 import Ratul from "./components/Ratul";
 import Nahid from "./components/Nahid";
+import Popover from "./components/master/Popover";
+import Learnmore from "./components/master/Learnmore";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -23,6 +25,8 @@ root.render(
       <Route path="shahariar" element={<Shahariar />}></Route>
       <Route path="ratul" element={<Ratul />}></Route>
       <Route path="nahid" element={<Nahid />}></Route>
+      <Route path="popover" element={<Popover />}></Route>
+      <Route path="learnmore" element={<Learnmore />}></Route>
     </Routes>
   </BrowserRouter>
 );

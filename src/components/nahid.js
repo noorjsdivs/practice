@@ -1,4 +1,3 @@
-
 import React from "react";
 
 function Nahid() {
@@ -10,4 +9,3 @@ function Nahid() {
 }
 
 export default Nahid;
-
