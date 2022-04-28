@@ -1,12 +1,11 @@
-import React from 'react'
+import React from "react";
 
-const sarjana = () => {
+const Sarjana = () => {
   return (
     <>
-    <h1>ami arpi..
-    </h1>
+      <h1>ami arpi..</h1>
     </>
-  )
-}
+  );
+};
 
-export default sarjana
+export default Sarjana;

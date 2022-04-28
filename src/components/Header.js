@@ -19,6 +19,7 @@ function Header() {
     { name: "Ratul", Link: "/ratul", current: false },
     { name: "Shahariar", Link: "/shahariar", current: false },
     { name: "Nahid", Link: "/nahid", current: false },
+    { name: "Sarjana", Link: "/sarjana", current: false },
   ];
   function classNames(...classes) {
     return classes.filter(Boolean).join(" ");
@@ -54,7 +55,7 @@ function Header() {
                     alt="Workflow"
                   />
                 </div>
-                <div className="hidden sm:block sm:ml-6">
+                <div className="hidden sm:block sm:ml-6 md:ml-2">
                   <div className="flex space-x-4">
                     {navigation.map((item) => (
                       <Link
@@ -102,7 +103,7 @@ function Header() {
                         src={LogoImg}
                         alt=""
                       />
-                      <p className="hidden md:block bg-gray-800 p-1 mt-1 rounded-full text-gray-400 hover:text-white  focus:ring-white ml-2">
+                      <p className="hidden lg:block bg-gray-800 p-1 mt-1 rounded-full text-gray-400 hover:text-white  focus:ring-white ml-2">
                         Noor Mohammad
                       </p>
                     </Menu.Button>
