@@ -8,7 +8,7 @@ const Tasnim = () => {
   let [numbers, setNumbers] = useState([]);
   let [operator, setOperator] = useState("");
   let [operators, setOperators] = useState([]);
-  let [sum, setSum] = useState("");
+  let [result, setResult] = useState(0);
   let [ans, setAns] = useState(0);
   
 
@@ -24,19 +24,24 @@ const Tasnim = () => {
     operators.push(e.target.value);
   }
   let handleAns = () => {
-        sum = numbers[0];
+        result = numbers[0];
         numbers.forEach((item,index)=>{
             if(operators[index] == '+'){
-                
-                sum = sum + numbers[index+1];
-                
-            }    
+                result = result + numbers[index+1];  
+            }  
+            else if(operators[index] == '-'){
+              result = result - numbers[index+1];  
+            } 
+            else if(operators[index] == '*'){
+              result = result * numbers[index+1];  
+            } 
+            else if(operators[index] == '/'){
+              result = result / numbers[index+1];  
+            }   
         }
         )
-        setAns(sum);
+        setAns(result);
     }
-
-
 
 
   return (
