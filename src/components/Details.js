@@ -2,6 +2,7 @@ import { React, Fragment, useState } from "react";
 import { Dialog, Popover, Tab, Transition } from "@headlessui/react";
 import { MenuIcon, SearchIcon, XIcon } from "@heroicons/react/outline";
 import { Link } from "react-router-dom";
+import Header from "./Header";
 
 function Details() {
   const navigation = {
@@ -141,6 +142,7 @@ function Details() {
   const [open, setOpen] = useState(false);
   return (
     <>
+      <Header />
       <div className="bg-white">
         {/* Mobile menu */}
         <Transition.Root show={open} as={Fragment}>
