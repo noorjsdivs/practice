@@ -1,0 +1,29 @@
+h2 {
+	text-align: center;
+	padding: 14px;
+	background-color:#6366f1;
+	color: #ffffff;
+    font-size: 30px;
+    width: 100%;
+    font-weight: 700;
+}
+.calculator{
+    text-align: center;
+    margin: 50px 0;
+}
+.calculator input{
+    background-color: #1f2937;
+    color: #ffffff;
+    border: 3px solid #d1d5db;
+	border-radius: 5px;
+	padding: 10px;
+	font-size: 16px;
+    width: 40px;
+}
+.calculator input.clear{
+    color: red;
+}
+.calculator input[type="text"] {
+    width: 120px;
+    background: #6366f1;
+}
