@@ -12,8 +12,6 @@ const Tasnim = () => {
   let [ans, setAns] = useState(0);
   
 
-
-
   let handleNumber = (e) => {
     setNumber(e.target.value);
     numbers.push(parseInt(e.target.value));
@@ -23,11 +21,12 @@ const Tasnim = () => {
     setOperator(e.target.value);
     operators.push(e.target.value);
   }
+
   let handleAns = () => {
         result = numbers[0];
         numbers.forEach((item,index)=>{
             if(operators[index] == '+'){
-                result = result + numbers[index+1];  
+              result = result + numbers[index+1];  
             }  
             else if(operators[index] == '-'){
               result = result - numbers[index+1];  
@@ -41,6 +40,12 @@ const Tasnim = () => {
         }
         )
         setAns(result);
+    }
+
+    let handleClear = () => {
+      setNumbers([]);
+      setOperators([]);
+      setAns(0);
     }
 
 
@@ -75,7 +80,7 @@ const Tasnim = () => {
             <input type = "button" value = "=" onClick={handleAns}/>
             <br/> 
 
-            <input type = "button" value = "C" className="clear"/>
+            <input type = "button" value = "C" className="clear" onClick={handleClear}/>
             <input type = "text" value= {ans} readOnly/> 
             <br/> 
   
