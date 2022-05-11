@@ -52,8 +52,15 @@ const Tasnim = () => {
     parenthesisindex.push(numbers.length-1);
   }
 
+  useEffect(() => {
+    setInputs((prev) => {
+      const inputs_arr = [...prev];
+      return inputs_arr;
+    });
+  }, [inputs]);
+
+
   let handleAns = () => {
-      console.log(inputs);
         result = numbers[0];
         if(parenthesis == ''){
           numbers.forEach((item,index)=>{
