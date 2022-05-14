@@ -61,7 +61,7 @@ const Tasnim = () => {
 
 
   let handleAns = () => {
-        result = numbers[0];
+    result = numbers[0];
         if(parenthesis == ''){
           numbers.forEach((item,index)=>{
               if(operators[index] == '+'){
@@ -80,30 +80,45 @@ const Tasnim = () => {
         }
         else{
           parenthesis.forEach((element,x)=>{
-            if(element == '('){
+             if(element == '('){
               parenthesisindex.forEach((element2,y)=>{
                 numbers.forEach((element3,z)=>{
-                  if(element2 == z-1 && element2 != z){
+                  let result1 = numbers[z];
+                  if(z==element2+1){
                     if(operators[z] == '+'){
-                      result = result + numbers[z+1];  
+                      result1 = result1 + numbers[z+1]; 
                     }  
                     else if(operators[z] == '-'){
-                      result = result - numbers[z+1];  
+                      result1 = result1 - numbers[z+1];  
                     } 
                     else if(operators[z] == '*'){
-                      result = result * numbers[z+1];  
+                      result1 = result1 * numbers[z+1];  
                     } 
                     else if(operators[z] == '/'){
-                      result = result / numbers[z+1];  
+                      result1 = result1 / numbers[z+1];  
                     }
                     operators[z] = '+';
-                    numbers[z+1] = 0;
+                    numbers[z] = 0;
+                    numbers[z+1] = result1;
                   } 
                 });
-                numbers[parenthesisindex[y]] = result;
-            });
-            }
-          }); 
+              });
+             }
+          });
+          numbers.forEach((item,index)=>{
+              if(operators[index] == '+'){
+                result = result + numbers[index+1];  
+              }  
+              else if(operators[index] == '-'){
+                result = result - numbers[index+1];  
+              } 
+              else if(operators[index] == '*'){
+                result = result * numbers[index+1];  
+              } 
+              else if(operators[index] == '/'){
+                result = result / numbers[index+1];  
+              }   
+            })
         }
         setAns(result);
   }
