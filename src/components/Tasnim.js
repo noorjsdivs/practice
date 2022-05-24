@@ -156,8 +156,6 @@ const Tasnim = () => {
     }
     setAns(result);
   }
-
-  let [result, setResult] = useState(0);
   let [ans, setAns] = useState(0);
 
   let handleNumber = (e) => {
