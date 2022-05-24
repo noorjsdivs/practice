@@ -156,34 +156,6 @@ const Tasnim = () => {
     }
     setAns(result);
   }
-  let [ans, setAns] = useState(0);
-
-  let handleNumber = (e) => {
-    setNumber(e.target.value);
-    numbers.push(parseInt(e.target.value));
-  };
-
-  let handleOperator = (e) => {
-    setOperator(e.target.value);
-    operators.push(e.target.value);
-  };
-
-  let handleAns = () => {
-    result = numbers[0];
-    numbers.forEach((item, index) => {
-      if (operators[index] === "+") {
-        result = result + numbers[index + 1];
-      } else if (operators[index] === "-") {
-        result = result - numbers[index + 1];
-      } else if (operators[index] === "*") {
-        result = result * numbers[index + 1];
-      } else if (operators[index] === "/") {
-        result = result / numbers[index + 1];
-      }
-    });
-    setAns(result);
-  };
-
 
   let handleClear = () => {
     setNumbers([]);
