@@ -62,65 +62,100 @@ const Tasnim = () => {
 
   let handleAns = () => {
     result = numbers[0];
-        if(parenthesis == ''){
-          numbers.forEach((item,index)=>{
-              if(operators[index] == '+'){
-                result = result + numbers[index+1];  
-              }  
-              else if(operators[index] == '-'){
-                result = result - numbers[index+1];  
-              } 
-              else if(operators[index] == '*'){
-                result = result * numbers[index+1];  
-              } 
-              else if(operators[index] == '/'){
-                result = result / numbers[index+1];  
-              }   
-          })
-        }
-        else{
-          parenthesis.forEach((element,x)=>{
-             if(element == '('){
-              parenthesisindex.forEach((element2,y)=>{
-                numbers.forEach((element3,z)=>{
-                  let result1 = numbers[z];
-                  if(z==element2+1){
-                    if(operators[z] == '+'){
-                      result1 = result1 + numbers[z+1]; 
-                    }  
-                    else if(operators[z] == '-'){
-                      result1 = result1 - numbers[z+1];  
-                    } 
-                    else if(operators[z] == '*'){
-                      result1 = result1 * numbers[z+1];  
-                    } 
-                    else if(operators[z] == '/'){
-                      result1 = result1 / numbers[z+1];  
-                    }
-                    operators[z] = '+';
-                    numbers[z] = 0;
-                    numbers[z+1] = result1;
+
+    if(parenthesis == ''){
+        let flag = 0;
+        operators.forEach((item, i) => {
+          if(flag==1){
+            i--;
+            flag = 0;
+          }
+          if(operators[i] == '*'){
+            numbers[i] = numbers[i] * numbers[i+1]; 
+            if(operators[i+1] == '*'){
+              flag = 1;
+            }
+            operators.splice(i,1);
+            numbers.splice(i+1,1);
+          }
+        });
+
+        operators.forEach((item, i) => {
+          if(flag==1){
+            i--;
+            flag = 0;
+          }
+          if(operators[i] == '/'){
+            numbers[i] = numbers[i] / numbers[i+1]; 
+            if(operators[i+1] == '/'){
+              flag = 1;
+            }
+            operators.splice(i,1);
+            numbers.splice(i+1,1);
+          }
+        });
+
+        result = numbers[0];
+
+        operators.forEach((item,index)=>{
+            if(operators[index] == '+'){
+              result = result + numbers[index+1];  
+            }  
+            else if(operators[index] == '-'){
+              result = result - numbers[index+1];  
+            }  
+        })
+    }
+
+    else{
+        parenthesis.forEach((element,x)=>{
+            if(element == '('){
+            parenthesisindex.forEach((element2,y)=>{
+              let flag2 = 0;
+              numbers.forEach((element3,z)=>{ 
+                if(flag2==1){
+                  z--;
+                  flag2 = 0;
+                }
+                let result1 = numbers[z];
+                if(z==element2+1){
+                  if(operators[z] == '+'){
+                    result1 = result1 + numbers[z+1]; 
+                  }  
+                  else if(operators[z] == '-'){
+                    result1 = result1 - numbers[z+1];  
                   } 
-                });
+                  else if(operators[z] == '*'){
+                    result1 = result1 * numbers[z+1];  
+                  } 
+                  else if(operators[z] == '/'){
+                    result1 = result1 / numbers[z+1];  
+                  }
+                  flag2 = 1;
+                  numbers[z] = result1;
+                  operators.splice(z,1);
+                  numbers.splice(z+1,1);
+                } 
               });
-             }
-          });
-          numbers.forEach((item,index)=>{
-              if(operators[index] == '+'){
-                result = result + numbers[index+1];  
-              }  
-              else if(operators[index] == '-'){
-                result = result - numbers[index+1];  
-              } 
-              else if(operators[index] == '*'){
-                result = result * numbers[index+1];  
-              } 
-              else if(operators[index] == '/'){
-                result = result / numbers[index+1];  
-              }   
-            })
-        }
-        setAns(result);
+            });
+            }
+        });
+        numbers.forEach((item,index)=>{
+            if(operators[index] == '+'){
+              result = result + numbers[index+1];  
+            }  
+            else if(operators[index] == '-'){
+              result = result - numbers[index+1];  
+            } 
+            else if(operators[index] == '*'){
+              result = result * numbers[index+1];  
+            } 
+            else if(operators[index] == '/'){
+              result = result / numbers[index+1];  
+            }   
+          })
+    }
+    setAns(result);
   }
 
   let handleClear = () => {
