@@ -1,10 +1,12 @@
 import { React } from "react";
 import { Form, Button } from "rsuite";
+import Header from "./Header";
 import "./Rasel.css";
 
 const Rasel = () => {
   return (
     <>
+      <Header />
       <div className="container">
         {/*----------- form header start ------------- */}
 

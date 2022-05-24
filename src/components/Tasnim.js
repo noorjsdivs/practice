@@ -3,7 +3,6 @@ import Header from './Header'
 import '../css/tasnim.css'
 
 const Tasnim = () => {
-
   let [number, setNumber] = useState("");
   let [numbers, setNumbers] = useState([]);
   let [operator, setOperator] = useState("");
@@ -158,6 +157,36 @@ const Tasnim = () => {
     setAns(result);
   }
 
+  let [result, setResult] = useState(0);
+  let [ans, setAns] = useState(0);
+
+  let handleNumber = (e) => {
+    setNumber(e.target.value);
+    numbers.push(parseInt(e.target.value));
+  };
+
+  let handleOperator = (e) => {
+    setOperator(e.target.value);
+    operators.push(e.target.value);
+  };
+
+  let handleAns = () => {
+    result = numbers[0];
+    numbers.forEach((item, index) => {
+      if (operators[index] === "+") {
+        result = result + numbers[index + 1];
+      } else if (operators[index] === "-") {
+        result = result - numbers[index + 1];
+      } else if (operators[index] === "*") {
+        result = result * numbers[index + 1];
+      } else if (operators[index] === "/") {
+        result = result / numbers[index + 1];
+      }
+    });
+    setAns(result);
+  };
+
+
   let handleClear = () => {
     setNumbers([]);
     setOperators([]);
@@ -192,11 +221,6 @@ const Tasnim = () => {
       return next;
     });
   }, [setInputs, setNumbers, setOperators]);
-  
-
-    
-
-
   return (
       <>
       <Header/>

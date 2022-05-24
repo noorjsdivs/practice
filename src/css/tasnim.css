@@ -38,4 +38,13 @@ h2 {
     background: #6366f1;
     text-align: right;
     cursor: default;
+=======
+    width: 40px;
+}
+.calculator input.clear{
+    color: red;
+}
+.calculator input[type="text"] {
+    width: 120px;
+    background: #6366f1;
 }
